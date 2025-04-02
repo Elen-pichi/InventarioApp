@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Gestión de Productos</title>
+    <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../public/css/all.min.css">
+    <link rel="stylesheet" href="../../../public/css/estilos.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Gestión de Productos</h1>
+
+        <div class="d-flex justify-content-between mb-3">
+            <div>
+              <button class="btn btn-success me-2 py-2" onclick="abrirCrearProducto()"> 
+                <i class="fa-solid fa-square-plus"></i> Nuevo Producto
+              </button>
+            </div>
+            <div>
+              <button class="btn btn-primary me-2 py-1" onclick="abrirCategorias()">
+                <i class="fa-solid fa-list"></i> Categorías
+              </button>
+              <button class="btn btn-primary py-1" onclick="abrirUbicaciones()"> 
+                <i class="fa-solid fa-location-dot"></i> Ubicaciones
+              </button>
+            </div>
+          </div>
+
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nº</th>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Stock</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Ubicación (Pas-Est-Zon)</th>
+                    <th>Proveedor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-productos">
+                <!-- Los productos se insertarán dinámicamente aquí desde rendererProductos.js -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../../js/productos/rendererProductos.js"></script>
+    <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

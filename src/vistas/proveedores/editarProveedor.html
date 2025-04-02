@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Proveedor</title>
+    <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../public/css/estilos.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Modificar Datos Proveedor</h2>
+
+        <form id="form-editar-proveedor">
+            <input type="hidden" id="id">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="text" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="text" class="form-control" id="telefono" required>
+            </div>
+            <div class="mb-3">
+                <label for="contacto" class="form-label">Contacto</label>
+                <input type="text" step="0.01" class="form-control" id="contacto" required>
+            </div>
+         
+            <button type="submit" class="btn btn-warning w-100" >Actualizar Proveedor</button>
+        </form>
+    </div>
+
+    <script src="../../js/proveedores/rendererEditarProveedor.js"></script>
+    <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

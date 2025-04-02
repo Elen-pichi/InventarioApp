@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Salida de Producto</title>
+  <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../public/css/estilos.css">
+</head>
+<body class="p-4">
+
+  <div class="container">
+    <h2 class="mb-4 text-center">📤 Salida de Producto</h2>
+
+    <!-- buscar producto por código -->
+    <div class="row mb-3">
+      <div class="col-md-8">
+        <input type="text" class="form-control" id="codigo" placeholder="🔍 Buscar por código">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary btn-sm py-0" onclick="buscarProducto()">Buscar</button>
+      </div>
+    </div>
+
+    <!-- buscar producto por nombre -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <input type="text" class="form-control" id="nombreBusqueda" placeholder="🔍 Buscar por nombre">
+      </div>
+      <div class="col-md-4" id="contenedorSelect" style="display: none;">
+        <select class="form-select" id="resultadoBusqueda" onchange="seleccionarProductoPorNombre()">
+          <option value="">-- Selecciona un producto --</option>
+        </select>
+        <small class="text-muted">Selecciona un producto para ver detalles</small>
+      </div>
+    </div>
+
+    <!-- datos del producto -->
+    <div id="datosProducto" style="display:none;">
+      <div class="mb-3">
+        <label class="form-label">Producto:</label>
+        <input type="text" class="form-control" id="nombreProducto" disabled>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Ubicación:</label>
+        <input type="text" class="form-control" id="ubicacionProducto" disabled>
+      </div>
+      <div class="mb-3">
+        <label for="cantidadSalida" class="form-label">Cantidad a retirar:</label>
+        <input type="number" class="form-control" id="cantidadSalida" min="1" placeholder="Ej. 5">
+      </div>
+      <div class="mb-3">
+        <label for="stockProducto" class="form-label">Stock Actual:</label>
+        <input type="number" class="form-control" id="stockProducto">
+      </div>
+      <button class="btn btn-danger w-100" onclick="registrarSalida()">Registrar Salida</button>
+    </div>
+
+    <div id="mensajeError" class="mt-3 text-danger text-center" style="display:none;"></div>
+  </div>
+
+  <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/movimientos/rendererCrearSalida.js"></script>
+
+</body>
+</html>

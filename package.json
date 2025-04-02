@@ -1,0 +1,19 @@
+{
+  "name": "inventarioapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron src/main/main.js"
+  },
+  "keywords": [],
+  "author": "ELENA MIGALLON",
+  "license": "ISC",
+  "description": "Aplicación de Escritorio Multiplataforma para el Control del Inventario de un Almacén",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bcryptjs": "^3.0.2",
+    "bootstrap": "^5.3.3",
+    "electron": "^34.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}

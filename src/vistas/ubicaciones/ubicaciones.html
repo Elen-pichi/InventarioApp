@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - Ubicaciones</title>
+    <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../public/css/all.min.css">
+    <link rel="stylesheet" href="../../../public/css/estilos.css">
+</head>
+
+<body class="p-4">
+    <h2><i class="fa-solid fa-location-dot"></i> Ubicaciones</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nº</th>
+          <th>Pasillo</th>
+          <th>Estante</th>
+          <th>Zona</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-ubicaciones">
+        <!-- Se cargan aquí las categorías -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td><input type="text" id="nuevoPasillo" class="form-control" placeholder="Pasillo"></td>
+          <td><input type="text" id="nuevoEstante" class="form-control" placeholder="Estante"></td>
+          <td><input type="text" id="nuevaZona" class="form-control" placeholder="Zona"></td>
+          <td>
+            <button class="btn btn-success btn-sm py-1" onclick="crearUbicacion()">Crear</button>
+            <button class="btn btn-secondary btn-sm py-1" onclick="cancelarCreacion()">Cancelar</button>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <script src="../../js/ubicaciones/rendererUbicaciones.js"></script>
+    <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

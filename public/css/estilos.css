@@ -1,0 +1,51 @@
+body {
+    background-color: #3a9afa;
+}
+
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f6f7f8;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: rgb(24, 23, 23);
+}
+
+/* Ajustes para los botones de acciones */
+table .btn-sm {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* Separación ligera entre los botones */
+table .btn-sm + .btn-sm {
+  margin-left: 4px;
+}
+
+/* Centrar el contenido de la última columna */
+table td.text-center,
+table th.text-center {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Mejorar visibilidad de las filas editables */
+tr.editando td {
+  background-color: #f8f9fa;
+}
+
+/* Botón de crear usuario arriba a la derecha */
+#btnCrearUsuario {
+  min-width: 150px;
+}
+
+/* Fila de nuevo usuario destacada */
+#fila-nueva td {
+  background-color: #e8f4fd;
+}

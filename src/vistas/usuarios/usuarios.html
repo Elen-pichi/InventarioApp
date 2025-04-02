@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../public/css/all.min.css">
+  <link rel="stylesheet" href="../../../public/css/estilos.css">
+</head>
+<body class="p-4">
+  <h2><i class="fa-solid fa-user-gear"></i> Gestión de Usuarios</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Rol</th>
+        <th class="solo-admin">Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaUsuarios">
+      <!-- Se cargan los usuarios -->
+    </tbody>
+    <tfoot class="solo-admin">
+      <tr>
+        <td><input type="text" id="nuevoNombre" class="form-control" placeholder="Nombre completo"></td>
+        <td><input type="text" id="nuevoUsuario" class="form-control" placeholder="Usuario"></td>
+        <td>
+          <select id="nuevoRol" class="form-select">
+            <option value="admin">admin</option>
+            <option value="usuario" selected>usuario</option>
+          </select>
+        </td>
+        <td>
+          <input type="password" id="nuevaContrasena" class="form-control mb-1" placeholder="Contraseña">
+          <button class="btn btn-success btn-sm py-1" onclick="crearUsuario()">Crear</button>
+          <button class="btn btn-secondary btn-sm py-1" onclick="cancelarCreacion()">Cancelar</button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <script src="../../../src/js/usuarios/rendererUsuarios.js"></script>
+  <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario - Menú Principal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../public/css/all.min.css">
+  <link rel="stylesheet" href="../../public/css/estilos.css">
+</head>
+
+<body>
+
+  <div class="text-end mt-4">
+    <button class="btn btn-outline-danger btn-sm py-0" onclick="logout()" title="Cerrar sesión">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </button>
+  </div>
+
+  <div class="text-center mb-4">
+    <h1>
+      <i class="fa-solid fa-warehouse"></i> GESTIÓN DE INVENTARIO <i class="fa-solid fa-warehouse"></i>
+    </h1>
+
+    <!-- bloque solo para administradores -->
+    <div class="solo-admin">
+      <div class="container">      
+        <div class="d-flex justify-content-end mb-3">
+          <button class="btn btn-outline-secondary" onclick="window.api.abrirVentana('usuarios')">
+            <i class="fa-solid fa-user-gear"></i> Usuarios
+          </button>
+        </div>
+        <div class="row text-center g-4">
+          <div class="col-sm-6 col-lg-4">
+            <button class="btn btn-secondary btn-lg w-100" onclick="abrirGestionProductos()"
+              aria-label="Gestionar Productos">
+              <i class="fa-solid fa-dolly"></i> Productos
+            </button>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <button class="btn btn-success btn-lg w-100" onclick="abrirProveedores()"
+              aria-label="Gestionar Proveedores">
+              <i class="fa-solid fa-truck-field"></i> Proveedores
+            </button>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <button class="btn btn-info btn-lg w-100" onclick="abrirMovimientos()" aria-label="Ver Informes">
+              <i class="fa-solid fa-folder-open"></i> Informes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <!-- entradas y salidas visibles para todos -->
+    <div class="row justify-content-center g-4">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <button id="botonEntrada" class="btn btn-primary btn-lg w-100" onclick="abrirEntrada()"
+          aria-label="Registrar Entrada">
+          <i class="fa-solid fa-plus"></i> Entrada Stock
+        </button>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <button id="botonSalida" class="btn btn-danger btn-lg w-100" onclick="abrirSalida()"
+          aria-label="Registrar Salida">
+          <i class="fa-solid fa-minus"></i> Salida Stock
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../src/js/rendererGeneral.js"></script>
+  <script src="../../public/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
